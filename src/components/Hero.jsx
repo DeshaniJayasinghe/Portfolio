@@ -78,7 +78,7 @@ const Hero = () => {
               
               <div className="grid grid-cols-1 gap-5">
                 <div className="flex justify-between items-center">
-                  <span className="text-[10px] font-bold text-gray-400 uppercase">ID No</span>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase">Student No</span>
                   <span className="text-sm font-bold text-gray-800 tracking-wide">CT/2022/067</span>
                 </div>
                 <div className="flex justify-between items-center">
@@ -87,7 +87,7 @@ const Hero = () => {
                 </div>
                 <div className="flex justify-between items-start text-right">
                   <span className="text-[10px] font-bold text-gray-400 uppercase mt-1">Institution</span>
-                  <span className="text-sm font-bold text-gray-800 max-w-[180px]">University of Kelaniya, FCT</span>
+                  <span className="text-sm font-bold text-gray-800 max-w-[180px]">Faculy of Computing & Technology,University of Kelaniya.</span>
                 </div>
               </div>
             </div>
