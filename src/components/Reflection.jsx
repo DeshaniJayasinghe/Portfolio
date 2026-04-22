@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -27,7 +26,7 @@ const Reflection = () => {
   ];
 
   return (
-    <section id="reflections" className="py-24 px-6 bg-gray-50/50">
+    <section id="reflections" className="py-24 px-6 bg-[#fcfcfd] dark:bg-[#0f172a] font-sans transition-colors duration-300">
       <div className="max-w-6xl mx-auto">
         
         {/* Header */}
@@ -37,11 +36,10 @@ const Reflection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight">
-         <span className="text-[#5e17eb]">Reflections</span>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white tracking-tight">
+            <span className="text-[#5e17eb]">Reflections</span>
           </h2>
-          
-          <div className="h-1 w-20 bg-[#5e17eb] mx-auto mt-6 rounded-full"></div>
+          <div className="h-1 w-12 bg-[#5e17eb] mx-auto mt-4 rounded-full"></div>
         </motion.div>
 
         {/* Reflection Cards */}
@@ -53,18 +51,18 @@ const Reflection = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-white p-8 md:p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+              className="bg-white dark:bg-gray-900 p-8 md:p-10 rounded-[2.5rem] border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-all"
             >
               <div className="mb-6">
-                <h3 className="text-xl font-bold text-gray-900 leading-tight">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white leading-tight">
                   {item.title}
                 </h3>
-                <p className="text-[#5e17eb] text-xs font-bold uppercase tracking-widest mt-2">
+                <p className="text-[#5e17eb] text-[10px] font-bold uppercase tracking-widest mt-2">
                   {item.subtitle}
                 </p>
               </div>
 
-              <div className="space-y-4 text-gray-600 text-sm leading-relaxed text-justify">
+              <div className="space-y-4 text-gray-600 dark:text-gray-400 text-sm leading-relaxed text-justify">
                 {item.content.map((para, i) => (
                   <p key={i}>{para}</p>
                 ))}

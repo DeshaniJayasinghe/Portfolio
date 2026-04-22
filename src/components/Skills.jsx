@@ -12,7 +12,7 @@ const SkillCard = ({ title, skills, imageSrc, imageAlt, delay }) => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ delay, duration: 0.5 }}
-    className="bg-white dark:bg-zinc-900 border border-gray-100 dark:border-white/5 p-8 rounded-[2rem] shadow-xl shadow-gray-200/50 flex flex-col items-center text-center group transition-all duration-300 hover:shadow-2xl"
+    className="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center group"
   >
     {/* Clean Image Container */}
     <div className="mb-6 flex justify-center items-center">
@@ -25,7 +25,6 @@ const SkillCard = ({ title, skills, imageSrc, imageAlt, delay }) => (
 
     {/* Text Content */}
     <div className="w-full">
-      {/* Title එකේ Font එක විතරක් තදට තිබ්බා, හැබැයි Uppercase අයින් කළා */}
       <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight leading-tight">
         {title}
       </h3>
@@ -33,11 +32,9 @@ const SkillCard = ({ title, skills, imageSrc, imageAlt, delay }) => (
       <div className="space-y-4">
         {skills.map((item, index) => (
           <div key={index} className="flex flex-col items-center">
-            {/* Label එක Capital අයින් කරලා bold කළා */}
             <span className="text-sm font-bold text-[#5e17eb] mb-1">
               {item.label}
             </span>
-            {/* Value එක Normal font weight එකට ගත්තා කියවන්න ලේසි වෙන්න */}
             <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base leading-relaxed max-w-[260px]">
               {item.value}
             </p>
@@ -85,19 +82,18 @@ const Skills = () => {
   ];
 
   return (
-    <section id="experience" className="py-24 px-6 bg-[#fcfcfd] dark:bg-black">
+    <section id="experience" className="py-24 px-6 bg-[#fcfcfd] dark:bg-[#0f172a] transition-colors duration-300 font-sans">
       <div className="max-w-7xl mx-auto">
         <motion.div 
-          initial={{ opacity: 0, y: -10 }}
+          initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mb-16 text-center"
         >
-          {/* Main Title එකත් පිළිවෙළ කළා */}
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white tracking-tight">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white tracking-tight">
             Experience <span className="text-[#5e17eb]">& Skills</span>
           </h2>
-          <div className="h-1.5 w-16 bg-[#5e17eb] mt-5 rounded-full mx-auto"></div>
+          <div className="h-1 w-12 bg-[#5e17eb] mt-4 rounded-full mx-auto"></div>
         </motion.div>
 
         {/* Responsive Grid */}
