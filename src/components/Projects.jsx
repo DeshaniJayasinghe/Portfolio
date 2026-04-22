@@ -119,27 +119,32 @@ const Projects = () => {
   const [expandedId, setExpandedId] = useState(null);
 
   return (
-    <section id="projects" className="py-24 px-6 bg-white">
+    <section id="projects" className="py-24 px-6 bg-white font-sans">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900 mb-12 uppercase tracking-widest text-center">
-          Academic <span className="text-[#5e17eb]"> Projects</span>
-        </h2>
+        
+        {/* Topic Section with Purple Line */}
+        <div className="mb-16 text-center">
+          <h2 className="text-3xl md:text-3xl font-extrabold text-gray-900 tracking-tight font-sans">
+            Academic <span className="text-[#5e17eb]">Projects</span>
+          </h2>
+          <div className="h-1.5 w-16 bg-[#5e17eb] mt-5 rounded-full mx-auto"></div>
+        </div>
 
         <div className="space-y-6">
           {projects.map((p) => (
-            <div key={p.id} className="border border-gray-100 rounded-[2rem] bg-gray-50 overflow-hidden shadow-sm">
+            <div key={p.id} className="border border-gray-100 rounded-[2.5rem] bg-[#fcfcfd] overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               
               {/* --- Card Header (Closed View) --- */}
               <div 
-                className="p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 cursor-pointer hover:bg-gray-100 transition-colors"
+                className="p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 cursor-pointer hover:bg-gray-50 transition-colors"
                 onClick={() => setExpandedId(expandedId === p.id ? null : p.id)}
               >
-                <img src={p.mainImg} alt={p.title} className="w-24 h-24 rounded-2xl object-cover shadow-md" />
+                <img src={p.mainImg} alt={p.title} className="w-24 h-24 rounded-3xl object-cover shadow-sm border border-gray-100" />
                 <div className="flex-1 text-center md:text-left">
-                  <h3 className="text-xl font-bold text-gray-900">{p.title}</h3>
-                  <p className="text-[#5e17eb] font-semibold text-sm uppercase tracking-wider mt-1">{p.course}</p>
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight">{p.title}</h3>
+                  <p className="text-[#5e17eb] font-bold text-xs uppercase tracking-widest mt-2">{p.course}</p>
                 </div>
-                <button className="px-6 py-2 bg-white border border-gray-200 rounded-full text-xs font-bold text-gray-500 uppercase tracking-widest hover:border-[#5e17eb] hover:text-[#5e17eb] transition-all">
+                <button className="px-6 py-2.5 bg-white border border-gray-200 rounded-full text-[10px] font-bold text-gray-500 uppercase tracking-widest hover:border-[#5e17eb] hover:text-[#5e17eb] transition-all shadow-sm">
                   {expandedId === p.id ? "Close Details" : "View Project Details"}
                 </button>
               </div>
@@ -151,60 +156,75 @@ const Projects = () => {
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.4, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <div className="p-8 pt-0 border-t border-gray-100 space-y-8 mt-4">
+                    <div className="p-8 pt-0 border-t border-gray-50 space-y-8 mt-4">
                       
                       {/* Grid Layout for details */}
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                        <div className="space-y-4">
-                          <h4 className="text-xs font-black text-[#5e17eb] uppercase tracking-[0.2em]">Objective</h4>
-                          <p className="text-gray-700 text-sm leading-relaxed">{p.objective}</p>
+                        <div className="space-y-5">
+                          <div>
+                            <h4 className="text-[10px] font-bold text-[#5e17eb] uppercase tracking-[0.2em] mb-2">Objective</h4>
+                            <p className="text-gray-600 text-sm leading-relaxed font-medium">{p.objective}</p>
+                          </div>
                           
-                          <h4 className="text-xs font-black text-[#5e17eb] uppercase tracking-[0.2em] pt-2">Description</h4>
-                          <p className="text-gray-600 text-sm leading-relaxed italic">{p.description}</p>
+                          <div>
+                            <h4 className="text-[10px] font-bold text-[#5e17eb] uppercase tracking-[0.2em] mb-2">Description</h4>
+                            <p className="text-gray-500 text-sm leading-relaxed italic font-medium">{p.description}</p>
+                          </div>
                         </div>
 
-                        <div className="space-y-4">
-                          <h4 className="text-xs font-black text-[#5e17eb] uppercase tracking-[0.2em]">Technologies</h4>
-                          <div className="flex flex-wrap gap-2">
-                            {p.tools.map((t, i) => (
-                              <span key={i} className="px-3 py-1 bg-white border border-gray-200 text-gray-600 rounded-lg text-[10px] font-bold uppercase">{t}</span>
-                            ))}
+                        <div className="space-y-5">
+                          <div>
+                            <h4 className="text-[10px] font-bold text-[#5e17eb] uppercase tracking-[0.2em] mb-2">Technologies</h4>
+                            <div className="flex flex-wrap gap-2">
+                              {p.tools.map((t, i) => (
+                                <span key={i} className="px-3 py-1 bg-white border border-gray-100 text-gray-600 rounded-lg text-[10px] font-bold uppercase shadow-sm">{t}</span>
+                              ))}
+                            </div>
                           </div>
 
-                          <h4 className="text-xs font-black text-[#5e17eb] uppercase tracking-[0.2em] pt-2">My Role & Outcomes</h4>
-                          <ul className="text-gray-600 text-sm space-y-2 list-disc pl-4">
-                            <li><b className="text-gray-800">Role:</b> {p.role}</li>
-                            <li><b className="text-gray-800">Outcome:</b> {p.outcomes}</li>
-                          </ul>
+                          <div>
+                            <h4 className="text-[10px] font-bold text-[#5e17eb] uppercase tracking-[0.2em] mb-2">My Role & Outcomes</h4>
+                            <ul className="text-gray-600 text-sm space-y-2 list-none">
+                              <li className="flex gap-2">
+                                <span className="text-[#5e17eb] font-bold">•</span>
+                                <span><b className="text-gray-800 font-bold">Role:</b> {p.role}</span>
+                              </li>
+                              <li className="flex gap-2">
+                                <span className="text-[#5e17eb] font-bold">•</span>
+                                <span><b className="text-gray-800 font-bold">Outcome:</b> {p.outcomes}</span>
+                              </li>
+                            </ul>
+                          </div>
                         </div>
                       </div>
 
-                      {/* Evidence අයින් කරලා Buttons විතරක් පෙන්වන කොටස */}
-                     <div className="flex flex-wrap gap-3 mt-6">
-                       {p.github && (
-                       <a 
-                         href={p.github} 
-                         target="_blank" 
-                         rel="noopener noreferrer"
-                         className="px-8 py-3 bg-[#5e17eb] text-white rounded-2xl text-[10px] font-bold hover:bg-black transition-all shadow-lg"
-                       >
-                        GITHUB REPOSITARY
-                      </a>
-                      )}
+                      {/* Action Buttons */}
+                      <div className="flex flex-wrap gap-4 mt-6">
+                        {p.github && (
+                          <a 
+                            href={p.github} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="px-8 py-3 bg-[#5e17eb] text-white rounded-2xl text-[10px] font-bold hover:bg-black transition-all shadow-lg shadow-[#5e17eb]/20 uppercase tracking-widest"
+                          >
+                            Github Repository
+                          </a>
+                        )}
 
-                       {p.liveSite && (
-                      <a 
-                        href={p.liveSite} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="px-8 py-3 bg-[#5e17eb] text-white rounded-2xl text-[10px] font-bold hover:bg-[#4a12ba] transition-all shadow-lg"
-                      >
-                          VIEW LIVE SITE
-                      </a>
-                      )}
-                     </div>
+                        {p.liveSite && (
+                          <a 
+                            href={p.liveSite} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="px-8 py-3 bg-black text-white rounded-2xl text-[10px] font-bold hover:bg-[#5e17eb] transition-all shadow-lg shadow-black/10 uppercase tracking-widest"
+                          >
+                            View Live Site
+                          </a>
+                        )}
+                      </div>
 
                     </div>
                   </motion.div>

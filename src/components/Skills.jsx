@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-// පින්තූර Import කිරීම (Paths: src/assets/...)
+// පින්තූර Import කිරීම
 import langImg from '../assets/lang.png';
 import toolsImg from '../assets/tools.png';
 import officeImg from '../assets/office.jpeg';
@@ -11,35 +11,37 @@ const SkillCard = ({ title, skills, imageSrc, imageAlt, delay }) => (
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
-    transition={{ delay, duration: 0.6 }}
-    className="flex flex-col items-center text-center space-y-6 flex-1 group"
+    transition={{ delay, duration: 0.5 }}
+    className="bg-white dark:bg-zinc-900 border border-gray-100 dark:border-white/5 p-8 rounded-[2rem] shadow-xl shadow-gray-200/50 flex flex-col items-center text-center group transition-all duration-300 hover:shadow-2xl"
   >
-    {/* Diamond Shape Image Container */}
-    <div className="relative w-44 h-44 sm:w-52 sm:h-52 group">
-      {/* Background Diamond with Glow */}
-      <div className="absolute inset-0 bg-[#5e17eb]/10 rounded-[2rem] rotate-45 group-hover:rotate-[50deg] group-hover:bg-[#5e17eb]/20 transition-all duration-500 shadow-xl shadow-[#5e17eb]/5"></div>
-      
-      {/* Main Image Container */}
-      <div className="absolute inset-2 bg-white dark:bg-gray-900 rounded-[1.8rem] rotate-45 overflow-hidden border-2 border-[#5e17eb]/10 flex items-center justify-center">
-        <img 
-          src={imageSrc} 
-          alt={imageAlt}
-          // -rotate-45 මඟින් පින්තූරය කෙළින් කරනවා. p-6 මඟින් දාර කැපීම වළක්වනවා.
-          className="w-full h-full object-contain -rotate-45 scale-90 group-hover:scale-100 transition-transform duration-500 p-6" 
-        />
-      </div>
+    {/* Clean Image Container */}
+    <div className="mb-6 flex justify-center items-center">
+      <img 
+        src={imageSrc} 
+        alt={imageAlt}
+        className="w-20 h-20 sm:w-24 sm:h-24 object-contain transition-transform duration-500 group-hover:scale-110" 
+      />
     </div>
 
     {/* Text Content */}
-    <div className="space-y-4 pt-4 px-4">
-      <h3 className="text-xl font-bold text-gray-900 dark:text-white border-b-2 border-[#5e17eb]/40 inline-block pb-1 group-hover:border-[#5e17eb] transition-colors">
+    <div className="w-full">
+      {/* Title එකේ Font එක විතරක් තදට තිබ්බා, හැබැයි Uppercase අයින් කළා */}
+      <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight leading-tight">
         {title}
       </h3>
-      <div className="text-sm sm:text-[15px] text-gray-600 dark:text-gray-300 space-y-3 leading-relaxed">
+      
+      <div className="space-y-4">
         {skills.map((item, index) => (
-          <p key={index}>
-            <span className="font-bold text-gray-800 dark:text-gray-100">{item.label}:</span> {item.value}
-          </p>
+          <div key={index} className="flex flex-col items-center">
+            {/* Label එක Capital අයින් කරලා bold කළා */}
+            <span className="text-sm font-bold text-[#5e17eb] mb-1">
+              {item.label}
+            </span>
+            {/* Value එක Normal font weight එකට ගත්තා කියවන්න ලේසි වෙන්න */}
+            <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base leading-relaxed max-w-[260px]">
+              {item.value}
+            </p>
+          </div>
         ))}
       </div>
     </div>
@@ -50,7 +52,7 @@ const Skills = () => {
   const skillsData = [
     {
       title: "Programming & Web Development",
-      imageSrc: langImg, // Import කළ පින්තූරය මෙතනට
+      imageSrc: langImg,
       imageAlt: "Programming Languages",
       delay: 0.1,
       skills: [
@@ -61,7 +63,7 @@ const Skills = () => {
     },
     {
       title: "Tools & Technologies",
-      imageSrc: toolsImg, // Import කළ පින්තූරය මෙතනට
+      imageSrc: toolsImg,
       imageAlt: "Networking and Cloud Tools",
       delay: 0.2,
       skills: [
@@ -73,7 +75,7 @@ const Skills = () => {
     },
     {
       title: "Software Suite (Productivity)",
-      imageSrc: officeImg, // Import කළ පින්තූරය මෙතනට
+      imageSrc: officeImg,
       imageAlt: "Microsoft Office Suite",
       delay: 0.3,
       skills: [
@@ -83,22 +85,23 @@ const Skills = () => {
   ];
 
   return (
-    <section id="experience" className="py-24 px-6 bg-white dark:bg-black/10">
+    <section id="experience" className="py-24 px-6 bg-[#fcfcfd] dark:bg-black">
       <div className="max-w-7xl mx-auto">
         <motion.div 
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-20 text-center md:text-left"
+          className="mb-16 text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-tight">
-            Experience <span className="text-[#5e17eb]">and Skills</span>
+          {/* Main Title එකත් පිළිවෙළ කළා */}
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white tracking-tight">
+            Experience <span className="text-[#5e17eb]">& Skills</span>
           </h2>
-          <div className="h-1.5 w-16 bg-[#5e17eb] mt-5 rounded-full mx-auto md:mx-0"></div>
+          <div className="h-1.5 w-16 bg-[#5e17eb] mt-5 rounded-full mx-auto"></div>
         </motion.div>
 
-        {/* Responsive Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 lg:gap-10">
+        {/* Responsive Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {skillsData.map((category, idx) => (
             <SkillCard key={idx} {...category} />
           ))}
