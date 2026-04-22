@@ -14,7 +14,7 @@ const projects = [
     outcomes: "The project successfully demonstrated a scalable model for digital land utilization, showing the potential to increase landowner income by 12-18% through optimized rentals. By providing a secure and transparent environment, the platform effectively replaces unreliable informal processes with a professional digital standard. The final result is a practical solution that supports Sri Lanka’s digital transformation goals, fosters entrepreneurship, and promotes sustainable agricultural growth by turning unused land into productive assets.",
     github: null,
     liveSite: "https://project-land-rental-platform-with-ai-consultation-370.magicpatterns.app/",
-    mainImg: "/project1.jpg"
+    mainImg: "./project1.jpg"
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const projects = [
     role: "In this five-member group project, I mainly contributed to the research and requirement analysis parts of BuildMe.lk. I helped to study Sri Lankan construction methods, material prices, and labour costs to understand how the system should work. I supported the team by identifying user requirements, suggesting important features, and helping to plan the estimation logic and design guidance ideas. I also assisted in preparing documentation, proposal writing, and overall system planning.",
     outcomes: "Through this project, I gained experience in requirement analysis, research, and planning a real-world software solution. I understood how to connect civil engineering knowledge with web technology to solve practical problems. The project improved my teamwork, problem-solving, and system design skills while contributing to the development of a smart construction support platform for Sri Lanka.",
     github: "https://github.com/YasiruRavidith/Buidmelk",
-    mainImg: "/project2.png"
+    mainImg: "./project2.png"
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ const projects = [
     role: "Working within a four-member group, I was responsible for the core structural design and implementation of key database components. I took full ownership of designing and coding three major SQL tables, including the creation of their comprehensive Data Dictionaries to define constraints and data types. Additionally, I developed the Relational Schema and collaborated closely with the team on the Entity Relationship (ER) Diagram to ensure the logical flow of data across the entire management system.",
     outcomes: "The project resulted in a fully normalized relational database capable of handling concurrent transactions between owners and tenants. By developing a clean relational schema and detailed documentation, I helped ensure the system was scalable and free of data redundancy. This project successfully demonstrated the transition from a frontend concept to a functional, data-driven backend solution, providing a solid foundation for secure digital land rental management.",
     github: "https://github.com/DeshaniJayasinghe/Smart_Land_Rental_Management_System",
-    mainImg: "/project3.jpg"
+    mainImg: "./project3.jpg"
   },
   {
     id: 4,
@@ -50,7 +50,7 @@ const projects = [
     role: "This was an individual assignment where I was responsible for the full software development lifecycle. I wrote the Python scripts for both the server and the client from scratch, specifically focusing on the socket bind/listen logic and the threading implementation. I also configured the virtualized network environment, setting up the Linux server and multiple client nodes in VirtualBox to verify that the concurrency logic worked under real network conditions.",
     outcomes: "The project resulted in a robust, multi-client communication system. It successfully demonstrated my ability to handle low-level network protocols and asynchronous programming. Key outcomes included the successful concurrent management of 2+ clients and the implementation of automated client tracking. This project provided practical experience in how modern servers (like web or chat servers) manage thousands of simultaneous users.",
     github: "https://github.com/DeshaniJayasinghe/Multi-Client-Reverse-Shell-Project", 
-    mainImg: "/project4.png"
+    mainImg: "./project4.png"
   },
   {
     id: 5,
@@ -62,7 +62,7 @@ const projects = [
     role: "As this was an individual project, I was responsible for the entire lifecycle of the network implementation. This included analyzing host requirements for each floor, designing the logical topology, performing manual VLSM calculations for five subnets, and executing the full device configuration via the Cisco CLI. I also conducted end-to-end connectivity testing using ICMP tools and documented the technical justifications for every hardware and cabling choice made (Fiber vs. Copper).",
     outcomes: "The project resulted in a fully functional, simulated network environment that met all business requirements for ABC Productions. I achieved a 93% IP address utilization efficiency through precise subnetting. The implementation of HSRP and RSTP successfully eliminated single points of failure, ensuring that the network remains operational even during hardware malfunctions. The final deliverable was a comprehensive technical report and a verified .pkt simulation file, demonstrating a professional-grade understanding of enterprise networking.",
     github: "https://github.com/DeshaniJayasinghe/Network-Design-and-Implementation",
-    mainImg: "/project5.jpg"
+    mainImg: "./project5.jpg"
   },
   {
     id: 6,
@@ -74,7 +74,7 @@ const projects = [
     role: "This was an individual assignment where I acted as the lead penetration tester. I configured the virtual lab environment, performed the initial connectivity checks (ping/nmap), and manually executed the exploit through the Metasploit CLI. I also performed critical post-exploitation tasks, such as using sysinfo to extract system details, getuid to check user privileges, and screenshare to monitor the target’s desktop in real-time.",
     outcomes: "The project successfully demonstrated a complete 'Remote Code Execution' (RCE) attack. By gaining full control over the target system, I illustrated the critical importance of regular security patching and disabling unnecessary services like RDP. The final output was a detailed presentation and technical evidence showing every step from initial scanning to total system compromise, confirming the efficacy of the chosen exploit.",
     github: "https://github.com/DeshaniJayasinghe/Penetration-Testing",
-    mainImg: "/project6.jpg"
+    mainImg: "./project6.jpg"
   },
   {
     id: 7,
@@ -86,7 +86,7 @@ const projects = [
     role: "As an individual mini-assessment, I performed all technical tasks. This included the installation and configuration of the VirtualBox manager, importing and setting up the Kali Linux ISO, and executing the reconnaissance phase. I was responsible for selecting the targets, running the terminal commands for theHarvester, and analyzing the raw data to find 'interesting' security findings.",
     outcomes: "The project resulted in a comprehensive security report detailing the digital footprint of the selected targets. I successfully demonstrated how an attacker can gather high-value intelligence (such as server versions, employee emails, and subdomains) completely undetected by the target's security systems. This project laid the groundwork for understanding the 'Reconnaissance' phase of the Cyber Attack Lifecycle (Kill Chain).",
     github: "https://github.com/DeshaniJayasinghe/Passive-Recon-Tools",
-    mainImg: "/project7.jpg"
+    mainImg: "./project7.jpg"
   },
   {
     id: 8,
@@ -98,7 +98,7 @@ const projects = [
     role: "As an individual project, I took full responsibility for the end-to-end simulation and configuration. I manually performed the initial switch and PC setups, handled the wireless GUI configuration for the home router, and set up the DHCP server to automate IP distribution for wireless nodes and smartphones. I also independently explored and implemented the VoIP setup and IoT registration, ensuring all components communicated seamlessly across the unified network topology.",
     outcomes: "The project resulted in a scalable and versatile hybrid network model. I successfully demonstrated the ability to bridge wired and wireless segments and gained practical experience in managing smart devices through an IoT server. A key outcome was the mastery of wireless connectivity protocols and the successful implementation of VoIP, proving the network's capability to handle diverse types of data and communication services within a single infrastructure.",
     github: "https://github.com/DeshaniJayasinghe/LAN-Implementation-and-Expansion",
-    mainImg: "/project8.jpg"
+    mainImg: "./project8.jpg"
   },
   {
     id: 9,
@@ -109,8 +109,8 @@ const projects = [
     description: "Instead of using conventional site builders, I built this portfolio using Vite and React to ensure maximum speed and customization. The project involved creating a component-based architecture, implementing smooth animations with Framer Motion, and managing complex data states for an expandable project gallery.",
     role: "Sole Developer - Responsible for the entire lifecycle, including UI/UX design, frontend development, asset management, and deployment logic. I focused heavily on creating a reusable 'Expandable Card' component to handle detailed project documentation.",
     outcomes: "Successfully mastered Vite-based development and the React ecosystem. I gained significant experience in Error Handling during the development phase (Syntax & Logic), responsive design principles, and learned how to optimize web assets for faster loading times.",
-    github: "https://github.com/DeshaniJayasinghe/Passive-Recon-Tools",
-    mainImg: "/project9.png"
+    github: "https://github.com/DeshaniJayasinghe/Portfolio",
+    mainImg: "./project9.png"
   },
   // ADD MORE PROJECTS...
 ];
