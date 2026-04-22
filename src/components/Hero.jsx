@@ -18,7 +18,7 @@ const Hero = () => {
           className="w-full md:hidden text-center mb-4"
         >
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white leading-tight">
-            Nimasha<span className="text-[#5e17eb]"> Deshani</span> <br /> Jayasinghe
+            Deshani<span className="text-[#5e17eb]">Jayasinghe</span> <br />
           </h1>
           <h2 className="text-[#5e17eb] font-bold tracking-[0.1em] uppercase text-[10px] mt-4 border-l-4 border-[#5e17eb] pl-4 inline-block">
             Exploring the Architecture of Networks and Information Systems

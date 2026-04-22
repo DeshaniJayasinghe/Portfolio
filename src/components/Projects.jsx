@@ -119,12 +119,12 @@ const Projects = () => {
   const [expandedId, setExpandedId] = useState(null);
 
   return (
-    <section id="projects" className="py-24 px-6 bg-white font-sans">
+    <section id="projects" className="py-24 px-6 bg-white dark:bg-[#0f172a] transition-colors duration-300 font-sans">
       <div className="max-w-5xl mx-auto">
         
         {/* Topic Section with Purple Line */}
         <div className="mb-16 text-center">
-          <h2 className="text-3xl md:text-3xl font-extrabold text-gray-900 tracking-tight font-sans">
+          <h2 className="text-3xl md:text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight font-sans">
             Academic <span className="text-[#5e17eb]">Projects</span>
           </h2>
           <div className="h-1.5 w-16 bg-[#5e17eb] mt-5 rounded-full mx-auto"></div>
@@ -132,19 +132,19 @@ const Projects = () => {
 
         <div className="space-y-6">
           {projects.map((p) => (
-            <div key={p.id} className="border border-gray-100 rounded-[2.5rem] bg-[#fcfcfd] overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            <div key={p.id} className="border border-gray-100 dark:border-gray-800 rounded-[2.5rem] bg-[#fcfcfd] dark:bg-[#1e293b]/50 overflow-hidden shadow-sm hover:shadow-md transition-all">
               
               {/* --- Card Header (Closed View) --- */}
               <div 
-                className="p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 cursor-pointer hover:bg-gray-50 transition-colors"
+                className="p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
                 onClick={() => setExpandedId(expandedId === p.id ? null : p.id)}
               >
-                <img src={p.mainImg} alt={p.title} className="w-24 h-24 rounded-3xl object-cover shadow-sm border border-gray-100" />
+                <img src={p.mainImg} alt={p.title} className="w-24 h-24 rounded-3xl object-cover shadow-sm border border-gray-100 dark:border-gray-700" />
                 <div className="flex-1 text-center md:text-left">
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight">{p.title}</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white tracking-tight">{p.title}</h3>
                   <p className="text-[#5e17eb] font-bold text-xs uppercase tracking-widest mt-2">{p.course}</p>
                 </div>
-                <button className="px-6 py-2.5 bg-white border border-gray-200 rounded-full text-[10px] font-bold text-gray-500 uppercase tracking-widest hover:border-[#5e17eb] hover:text-[#5e17eb] transition-all shadow-sm">
+                <button className="px-6 py-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full text-[10px] font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest hover:border-[#5e17eb] hover:text-[#5e17eb] transition-all shadow-sm">
                   {expandedId === p.id ? "Close Details" : "View Project Details"}
                 </button>
               </div>
@@ -159,19 +159,19 @@ const Projects = () => {
                     transition={{ duration: 0.4, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <div className="p-8 pt-0 border-t border-gray-50 space-y-8 mt-4">
+                    <div className="p-8 pt-0 border-t border-gray-50 dark:border-gray-800/50 space-y-8 mt-4">
                       
                       {/* Grid Layout for details */}
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                         <div className="space-y-5">
                           <div>
                             <h4 className="text-[10px] font-bold text-[#5e17eb] uppercase tracking-[0.2em] mb-2">Objective</h4>
-                            <p className="text-gray-600 text-sm leading-relaxed font-medium">{p.objective}</p>
+                            <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed font-medium">{p.objective}</p>
                           </div>
                           
                           <div>
                             <h4 className="text-[10px] font-bold text-[#5e17eb] uppercase tracking-[0.2em] mb-2">Description</h4>
-                            <p className="text-gray-500 text-sm leading-relaxed italic font-medium">{p.description}</p>
+                            <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed italic font-medium">{p.description}</p>
                           </div>
                         </div>
 
@@ -180,21 +180,21 @@ const Projects = () => {
                             <h4 className="text-[10px] font-bold text-[#5e17eb] uppercase tracking-[0.2em] mb-2">Technologies</h4>
                             <div className="flex flex-wrap gap-2">
                               {p.tools.map((t, i) => (
-                                <span key={i} className="px-3 py-1 bg-white border border-gray-100 text-gray-600 rounded-lg text-[10px] font-bold uppercase shadow-sm">{t}</span>
+                                <span key={i} className="px-3 py-1 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 text-gray-600 dark:text-gray-300 rounded-lg text-[10px] font-bold uppercase shadow-sm">{t}</span>
                               ))}
                             </div>
                           </div>
 
                           <div>
                             <h4 className="text-[10px] font-bold text-[#5e17eb] uppercase tracking-[0.2em] mb-2">My Role & Outcomes</h4>
-                            <ul className="text-gray-600 text-sm space-y-2 list-none">
+                            <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-2 list-none">
                               <li className="flex gap-2">
                                 <span className="text-[#5e17eb] font-bold">•</span>
-                                <span><b className="text-gray-800 font-bold">Role:</b> {p.role}</span>
+                                <span><b className="text-gray-800 dark:text-gray-100 font-bold">Role:</b> {p.role}</span>
                               </li>
                               <li className="flex gap-2">
                                 <span className="text-[#5e17eb] font-bold">•</span>
-                                <span><b className="text-gray-800 font-bold">Outcome:</b> {p.outcomes}</span>
+                                <span><b className="text-gray-800 dark:text-gray-100 font-bold">Outcome:</b> {p.outcomes}</span>
                               </li>
                             </ul>
                           </div>
@@ -208,7 +208,7 @@ const Projects = () => {
                             href={p.github} 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="px-8 py-3 bg-[#5e17eb] text-white rounded-2xl text-[10px] font-bold hover:bg-black transition-all shadow-lg shadow-[#5e17eb]/20 uppercase tracking-widest"
+                            className="px-8 py-3 bg-[#5e17eb] text-white rounded-2xl text-[10px] font-bold hover:bg-black dark:hover:bg-white dark:hover:text-black transition-all shadow-lg shadow-[#5e17eb]/20 uppercase tracking-widest"
                           >
                             Github Repository
                           </a>
@@ -219,7 +219,7 @@ const Projects = () => {
                             href={p.liveSite} 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="px-8 py-3 bg-black text-white rounded-2xl text-[10px] font-bold hover:bg-[#5e17eb] transition-all shadow-lg shadow-black/10 uppercase tracking-widest"
+                            className="px-8 py-3 bg-black dark:bg-white dark:text-black text-white rounded-2xl text-[10px] font-bold hover:bg-[#5e17eb] dark:hover:bg-[#5e17eb] dark:hover:text-white transition-all shadow-lg shadow-black/10 uppercase tracking-widest"
                           >
                             View Live Site
                           </a>
@@ -237,5 +237,4 @@ const Projects = () => {
     </section>
   );
 };
-
 export default Projects;

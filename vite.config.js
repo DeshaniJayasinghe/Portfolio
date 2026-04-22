@@ -8,5 +8,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/', 
+  // සාමාන්‍යයෙන් localhost එකේ වැඩ කරද්දී '/' ප්‍රමාණවත්. 
+  // හැබැයි GitHub Pages වල දාද්දී '/Portfolio/' වගේ (repo name එක) වෙන්න ඕනේ.
+  base: './', 
 })
