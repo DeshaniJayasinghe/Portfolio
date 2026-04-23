@@ -150,7 +150,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Darkened Overlay - Menu එක ඇරුණම පිටිපස්සේ තියෙන කොටස අඳුරු කරන්න */}
+      {/* Darkened Overlay - Menu*/}
       {isOpen && (
         <div 
           className="fixed inset-0 bg-black/40 xl:hidden z-[105] transition-opacity duration-500" 

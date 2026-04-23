@@ -11,12 +11,12 @@ const About = () => {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16 text-center md:text-left"
+          className="mb-16 text-center"
         >
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white tracking-tight">
             About <span className="text-[#5e17eb]">Me</span>
           </h2>
-          <div className="h-1 w-12 bg-[#5e17eb] mt-4 rounded-full mx-auto md:mx-0"></div>
+          <div className="h-1 w-12 bg-[#5e17eb] mt-4 rounded-full mx-auto"></div>
         </motion.div>
 
         <motion.div 

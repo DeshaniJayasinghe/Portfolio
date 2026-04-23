@@ -56,7 +56,7 @@ const Engagement = () => {
             description={
               <div className="space-y-4">
                 <p>I had the privilege of attending the 4th Undergraduate Research Symposium (URS) at the Faculty of Computing and Technology (FCT), University of Kelaniya. Organized in conjunction with the <b className="text-gray-900 dark:text-gray-200">9th International Conference on Advances in Technology and Computing (ICATC) 2024</b>, this event served as a premier platform for scholarly research.</p>
-                <p> Participating as an observer allowed me to immerse myself in a professional environment dedicated to knowledge exchange. Witnessing research topics—from software development to <b className="text-gray-900 dark:text-gray-200">network security</b>—significantly broadened my understanding of the technological landscape and sparked a keen interest in pursuing research that addresses real-world challenges.</p>
+                <p> Participating as an observer allowed me to immerse myself in a professional environment dedicated to knowledge exchange. Witnessing research topics from software development to <b className="text-gray-900 dark:text-gray-200">network security</b> significantly broadened my understanding of the technological landscape and sparked a keen interest in pursuing research that addresses real world challenges.</p>
               </div>
             }
           />
@@ -68,10 +68,10 @@ const Engagement = () => {
             description={
               <div className="space-y-4">
                 <p>
-                  I participated in the <b className="text-gray-900 dark:text-gray-200">"GIT STARTED: MASTER GIT & GITHUB"</b> workshop organized by the <b className="text-gray-900 dark:text-gray-200">FOSS Community</b> of the University of Kelaniya. This hands-on experience was designed to bridge the gap between theoretical coding and professional software development practices.
+                  I participated in the <b className="text-gray-900 dark:text-gray-200">"GIT STARTED: MASTER GIT & GITHUB"</b> workshop organized by the <b className="text-gray-900 dark:text-gray-200">FOSS Community</b> of the University of Kelaniya. This hands on experience was designed to bridge the gap between theoretical coding and professional software development practices.
                 </p>
                 <p>
-                  I gained a comprehensive understanding of <b className="text-gray-900 dark:text-gray-200">Version Control Systems (VCS)</b>, mastering essential skills such as managing repositories, tracking changes, and branching workflows. This session emphasized collaborative coding, boosting my confidence in using industry-standard tools required for complex projects.
+                  I gained a comprehensive understanding of <b className="text-gray-900 dark:text-gray-200">Version Control Systems (VCS)</b>, mastering essential skills such as managing repositories, tracking changes, and branching workflows. This session emphasized collaborative coding, boosting my confidence in using industry standard tools required for complex projects.
                 </p>
               </div>
             }
@@ -111,7 +111,7 @@ const Engagement = () => {
             delay={0.1}
             description={
               <div className="space-y-4">
-                <p>My immediate focus is on successfully completing my <b className="text-gray-900 dark:text-gray-200">BICT (Hons) degree</b> with a strong academic record. I aim to secure a specialized internship in <b className="text-gray-900 dark:text-gray-200">Cloud Engineering or Networking</b> to apply my theoretical knowledge to enterprise-level infrastructure projects.</p>
+                <p>My immediate focus is on successfully completing my <b className="text-gray-900 dark:text-gray-200">BICT (Hons) degree</b> with a strong academic record. I aim to secure a specialized internship in <b className="text-gray-900 dark:text-gray-200">Cloud Engineering or Networking</b> to apply my theoretical knowledge to enterprise level infrastructure projects.</p>
               </div>
             }
           />
@@ -123,7 +123,7 @@ const Engagement = () => {
             delay={0.2}
             description={
               <div className="space-y-4">
-                <p>In the long run, I aspire to become a <b className="text-gray-900 dark:text-gray-200">Solutions Architect</b>, designing resilient and scalable cloud-native architectures. I plan to contribute to the tech community by mentoring aspiring students and leading innovative digital transformation initiatives in Sri Lanka.</p>
+                <p>In the long run, I aspire to become a <b className="text-gray-900 dark:text-gray-200">Solutions Architect</b>, designing resilient and scalable cloud native architectures. I plan to contribute to the tech community by mentoring aspiring students and leading innovative digital transformation initiatives in Sri Lanka.</p>
               </div>
             }
           />
